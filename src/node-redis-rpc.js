@@ -38,7 +38,7 @@ NodeRedisRpc.prototype.emit = function (channel, message, options) {
         var self = this;
         var uuid = nodeUuid.v4();
 
-        // Tell the responing method that we're executing a rpc request and want to receive a response.
+        // Tell the responding method that we're executing a rpc request and want to receive a response.
         message.__type = 'rpc';
         message.__backChannel = uuid;
 
@@ -114,6 +114,9 @@ NodeRedisRpc.prototype.on = function (channel, handler, callback) {
 
         // Check if event is of type "rpc".
         if ('__type' in message && message.__type === 'rpc') {
+            // After the application executes the "done" handler,
+            // the result will be trigger back to the "back channel" (rpc response).
+            // After that step, the "rpc callback" handler will handle the result data.
             rpcCallbackHandler = function (err, result) {
                 self.emit(
                     message.__backChannel,
