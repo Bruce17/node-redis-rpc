@@ -18,7 +18,7 @@ module.exports = function (grunt) {
          * Some basic information e.g. to create a banner
          */
         basicInformation: {
-            author: 'Michael Raith <Bruce17@users.noreply.github.com>',
+            author: 'Michael Raith <mia87@web.de>',
             url: 'https://github.com/Bruce17',
             date: '<%= grunt.template.today("yyyy-mm-dd hh:MM:ss") %>'
         },
