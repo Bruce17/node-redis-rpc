@@ -7,12 +7,3 @@ node_js:
 
 services:
   - redis-server
-
-deploy:
-  provider: npm
-  email: mia87@web.de
-  api_key:
-    secure: pFdI8qxAP0UjYI0H1by7+uBuFdbaUCP4h9zaOjllbeh2su2dltyNDlWNJsCsfcfqJsRPBCKVL8qzW0xwjUzwwzQpwgxJvWziDIf3BLU0btpXOM0bpvXZ5eTMuTEIA00JsAFZQRZaP0otibe1ojyBbFD19e4afq8DeISAtNUMw3g=
-  on:
-    tags: true
-    repo: Bruce17/node-redis-rpc
