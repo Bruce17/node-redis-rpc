@@ -4,7 +4,7 @@
   "description": "A simple node redis rpc implementation build on top of \"node-redis-pubsub\"",
   "main": "index.js",
   "engines": {
-    "node": ">=0.8.0",
+    "node": ">=0.10.0",
     "iojs": ">=1.0.0"
   },
   "scripts": {
