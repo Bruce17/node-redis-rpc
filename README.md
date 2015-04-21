@@ -33,7 +33,7 @@ var NodeRedisRpc = require('node-redis-rpc');
 var config = {
     host: 'localhost', // redis server hostname
     port: 6379,        // redis server port
-    auth: 'password',   // optional password
+    auth: 'password',  // optional password
     scope: 'test'      // use scope to prevent sharing messages between "node redis rpc"
 };
 var nodeRedisRpcInst = new NodeRedisRpc(config);
@@ -42,21 +42,35 @@ var nodeRedisRpcInst = new NodeRedisRpc(config);
 ### Simple rpc
 
 ```javascript
+// Register a listener on the channel "foo:bar" [1]
 nodeRedisRpcInst.on('foo:bar', function (data, channel, done) {
     // do s.th. ...
     
-    done(null, {foo: 'bar', num: 123});
+    // Trigger done handler to fire back rpc result [2]
+    // - first arg:  error status
+    // - second arg: result data
+    done(null, {num: 123, ary: [1,2,3,4], text: 'hello'});
 });
 
+/**
+ * RPC callback handler [3]
+ *
+ * @param {null|*} err    error status
+ * @param {*}      result result data returned by the rpc callback (see [2])
+ */
 var myRpcCallback = function (err, result) {
     console.log('err', err);       // outputs: 'null'
     console.log('result', result); // outputs: '{foo: 'bar', num: 123}'
 };
 
+// Trigger an event on the channel "foo:bar" (received by [1])
 nodeRedisRpcInst.emit(
-    'foo:bar',
-    {name: 'Hans'},
-    {type: 'rpc', callback: myRpcCallback}
+    'foo:bar',      // channel
+    {name: 'Hans'}, // message data
+    {               // options
+        type: 'rpc',            // trigger an event of type "rpc"
+        callback: myRpcCallback // register a callback handler [3] to be executed when the rpc result returns
+    }
 );
 ```
 
