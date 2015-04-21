@@ -1,6 +1,6 @@
 {
   "name": "node-redis-rpc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple node redis rpc implementation build on top of \"node-redis-pubsub\"",
   "main": "index.js",
   "engines": {
@@ -8,7 +8,13 @@
     "iojs": ">=1.0.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/grunt test"
+    "test": "mocha --harmony --recursive -R spec --require should test/**/*.spec.js --bail",
+    "test-cov": "node --harmony node_modules/istanbul-harmony/lib/cli.js cover ./node_modules/mocha/bin/_mocha  -- -u exports --require should  --recursive test/**/*.spec.js --bail",
+    "test-travis": "node --harmony node_modules/istanbul-harmony/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -u exports --require should  --recursive test/**/*.spec.js --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bruce17/node-redis-rpc"
   },
   "keywords": [
     "node",
@@ -35,6 +41,7 @@
     "grunt-mocha": "^0.4.12",
     "grunt-mocha-test": "^0.12.7",
     "grunt-remove-logging": "^0.2.0",
+    "istanbul-harmony": "^0.3.12",
     "load-grunt-tasks": "^3.1.0",
     "mocha": "^2.2.4",
     "should": "^6.0.1",
