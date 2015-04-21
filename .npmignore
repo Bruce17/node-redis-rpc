@@ -5,6 +5,9 @@
 .eslintrc
 .eslintignore
 
+# testing, ci, etc.
+.codeclimate.yml
+
 # folders not needed for npm
 test
 src
