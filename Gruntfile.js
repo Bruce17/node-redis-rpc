@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         basicInformation: {
             author: 'Michael Raith <mia87@web.de>',
             url: 'https://github.com/Bruce17',
-            date: '<%= grunt.template.today("yyyy-mm-dd hh:MM:ss") %>'
+            date: '<%= grunt.template.today("yyyy-mm-dd HH:MM:ss") %>'
         },
 
         banner: '/**\n' +
