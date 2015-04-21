@@ -1,0 +1,10 @@
+# project files
+.gitignore
+
+# linting files
+.eslintrc
+.eslintignore
+
+# folders not needed for npm
+test
+src

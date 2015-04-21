@@ -1,0 +1,8 @@
+# project files
+.idea
+
+# npm
+node_modules
+
+# builded files
+lib

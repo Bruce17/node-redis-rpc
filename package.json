@@ -1,0 +1,45 @@
+{
+  "name": "node-redis-rpc",
+  "version": "1.0.0",
+  "description": "A simple node redis rpc implementation build on top of \"node-redis-pubsub\"",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.8.0",
+    "iojs": ">=1.0.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/grunt test",
+    "prepublish": "./node_modules/.bin/grunt"
+  },
+  "keywords": [
+    "node",
+    "redis",
+    "pubsub",
+    "rpc"
+  ],
+  "author": {
+    "name": "Michael Raith",
+    "email": "Bruce17@users.noreply.github.com",
+    "url": "https://github.com/Bruce17"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "node-redis-pubsub": "^0.5.0",
+    "node-uuid": "^1.4.3"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "grunt": "^0.4.5",
+    "grunt-banner": "^0.3.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-eslint": "^11.0.0",
+    "grunt-mocha": "^0.4.12",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-remove-logging": "^0.2.0",
+    "load-grunt-tasks": "^3.1.0",
+    "mocha": "^2.2.4",
+    "should": "^6.0.1",
+    "sinon": "^1.14.1",
+    "sinon-chai": "^2.7.0"
+  }
+}
