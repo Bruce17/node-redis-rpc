@@ -82,6 +82,20 @@ module.exports = function (grunt) {
          */
         removelogging: {
             main: {
+                options: {
+                    namespace: [
+                        'console'
+                    ],
+                    methods: [
+                        'log',
+                        'info',
+                        'warn',
+                        'debug',
+                        'error'
+                    ],
+                    replaceWith: ''
+                },
+
                 files: '<%= files.jsLib %>'
             }
         },
