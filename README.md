@@ -29,7 +29,7 @@ var NodeRedisRpc = require('node-redis-rpc');
 var config = {
     host: 'localhost', // redis server hostname
     port: 6379,        // redis server port
-    auth: 'password,   // optional password
+    auth: 'password',   // optional password
     scope: 'test'      // use scope to prevent sharing messages between "node redis rpc"
 };
 var nodeRedisRpcInst = new NodeRedisRpc(config);
