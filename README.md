@@ -2,6 +2,7 @@
 [![Dependency Status](https://david-dm.org/Bruce17/node-redis-rpc.svg?style=flat-square)](https://david-dm.org/Bruce17/node-redis-rpc)
 [![devDependency Status](https://david-dm.org/Bruce17/node-redis-rpc/dev-status.svg?style=flat-square)](https://david-dm.org/Bruce17/node-redis-rpc#info=devDependencies)
 [![code climate](https://img.shields.io/codeclimate/github/Bruce17/node-redis-rpc.svg?style=flat-square)](https://codeclimate.com/github/Bruce17/node-redis-rpc)
+[![Travis CI](https://travis-ci.org/Bruce17/node-redis-rpc.svg?style=flat-square)](https://travis-ci.org/Bruce17/node-redis-rpc)
 
 NRR (node redis RPC)
 ====================
@@ -12,6 +13,7 @@ over redis and between node.js instances. Every node.js instance can connect to 
 pub/sub or register/trigger rpc calls.
 
 ## Important Changes
+- 1.0.2 minor changes, added status icons, added travis support
 - 1.0.0 first commit
 
 
