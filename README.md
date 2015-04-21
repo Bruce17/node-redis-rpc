@@ -1,3 +1,8 @@
+[![npm package](https://img.shields.io/npm/v/node-redis-rpc.svg?style=flat-square)](https://www.npmjs.org/package/node-redis-rpc)
+[![Dependency Status](https://david-dm.org/Bruce17/node-redis-rpc.svg?style=flat-square)](https://david-dm.org/Bruce17/node-redis-rpc)
+[![devDependency Status](https://david-dm.org/Bruce17/node-redis-rpc/dev-status.svg?style=flat-square)](https://david-dm.org/Bruce17/node-redis-rpc#info=devDependencies)
+[![code climate](https://img.shields.io/codeclimate/github/Bruce17/node-redis-rpc.svg?style=flat-square)](https://codeclimate.com/github/Bruce17/node-redis-rpc)
+
 NRR (node redis RPC)
 ====================
 
