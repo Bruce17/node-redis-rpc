@@ -5,6 +5,9 @@ node_js:
   - "0.10"
   - "iojs"
 
+services:
+  - redis-server
+
 deploy:
   provider: npm
   email: mia87@web.de
