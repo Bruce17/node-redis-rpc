@@ -4,6 +4,6 @@
  * @date   20.04.2015 17:51
  */
 
-var NodeRedisRpc = require('./src/node-redis-rpc');
+var NodeRedisRpc = require('./lib/node-redis-rpc');
 
 module.exports = NodeRedisRpc;

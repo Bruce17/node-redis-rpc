@@ -1,6 +1,6 @@
 {
   "name": "node-redis-rpc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple node redis rpc implementation build on top of \"node-redis-pubsub\"",
   "main": "index.js",
   "engines": {
@@ -8,8 +8,7 @@
     "iojs": ">=1.0.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/grunt test",
-    "prepublish": "./node_modules/.bin/grunt"
+    "test": "./node_modules/.bin/grunt test"
   },
   "keywords": [
     "node",
