@@ -13,6 +13,8 @@ over redis and between node.js instances. Every node.js instance can connect to 
 pub/sub or register/trigger rpc calls.
 
 ## Important Changes
+- 1.0.7 updated dependencies
+- 1.0.6 removed automatic npm publish from travis
 - 1.0.5 updated gruntfile build process, added more comments
 - 1.0.4 added redis server to the travis build environment (for tests only)
 - 1.0.3 adjusted travis config and unit tests
