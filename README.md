@@ -1,9 +1,3 @@
-[![npm package](https://img.shields.io/npm/v/node-redis-rpc.svg?style=flat-square)](https://www.npmjs.org/package/node-redis-rpc)
-[![Dependency Status](https://david-dm.org/Bruce17/node-redis-rpc.svg?style=flat-square)](https://david-dm.org/Bruce17/node-redis-rpc)
-[![devDependency Status](https://david-dm.org/Bruce17/node-redis-rpc/dev-status.svg?style=flat-square)](https://david-dm.org/Bruce17/node-redis-rpc#info=devDependencies)
-[![code climate](https://img.shields.io/codeclimate/github/Bruce17/node-redis-rpc.svg?style=flat-square)](https://codeclimate.com/github/Bruce17/node-redis-rpc)
-[![Travis CI](https://travis-ci.org/Bruce17/node-redis-rpc.svg?style=flat-square)](https://travis-ci.org/Bruce17/node-redis-rpc)
-
 NRR (node redis RPC)
 ====================
 
@@ -11,6 +5,14 @@ Simple rpc for node using redis. This library extends [node redis pubsub](https:
 and uses its feature as a base. It uses the existing methods `on/subscribe` / `emit/publish` to realize a simple rpc
 over redis and between node.js instances. Every node.js instance can connect to the event bus, listen to the bus via
 pub/sub or register/trigger rpc calls.
+
+
+[![npm package](https://img.shields.io/npm/v/node-redis-rpc.svg?style=flat-square)](https://www.npmjs.org/package/node-redis-rpc)
+[![Dependency Status](https://david-dm.org/Bruce17/node-redis-rpc.svg?style=flat-square)](https://david-dm.org/Bruce17/node-redis-rpc)
+[![devDependency Status](https://david-dm.org/Bruce17/node-redis-rpc/dev-status.svg?style=flat-square)](https://david-dm.org/Bruce17/node-redis-rpc#info=devDependencies)
+[![code climate](https://img.shields.io/codeclimate/github/Bruce17/node-redis-rpc.svg?style=flat-square)](https://codeclimate.com/github/Bruce17/node-redis-rpc)
+[![Travis CI](https://travis-ci.org/Bruce17/node-redis-rpc.svg?style=flat-square)](https://travis-ci.org/Bruce17/node-redis-rpc)
+
 
 ## Important Changes
 - 1.0.7 updated dependencies
