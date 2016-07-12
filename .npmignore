@@ -1,5 +1,11 @@
+# IDE
+.idea
+.c9
+
 # project files
 .gitignore
+.git
+Gruntfile.js
 
 # linting files
 .eslintrc
@@ -11,3 +17,4 @@
 # folders not needed for npm
 test
 src
+coverage
