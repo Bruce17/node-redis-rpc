@@ -1,5 +1,4 @@
-NRR (node redis RPC)
-====================
+# NRR (node redis RPC)
 
 Simple rpc for node using redis. This library extends [node redis pubsub](https://www.npmjs.com/package/node-redis-pubsub)
 and uses its feature as a base. It uses the existing methods `on/subscribe` / `emit/publish` to realize a simple rpc
@@ -16,6 +15,7 @@ pub/sub or register/trigger rpc calls.
 
 
 ## Important Changes
+- 1.0.8 update `README.md` & `.npmignore` file
 - 1.0.7 updated dependencies
 - 1.0.6 removed automatic npm publish from travis
 - 1.0.5 updated gruntfile build process, added more comments
