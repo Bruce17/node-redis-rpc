@@ -1,5 +1,5 @@
 var NRP = require('node-redis-pubsub');
-var nodeUuid = require('node-uuid');
+var nodeUuid = require('uuid');
 
 
 /**
