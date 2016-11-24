@@ -36,19 +36,19 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "codeclimate-test-reporter": "^0.3.3",
+    "codeclimate-test-reporter": "^0.4.0",
     "coveralls": "^2.11.2",
     "grunt": "^1.0.1",
     "grunt-banner": "^0.6.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-eslint": "^19.0.0",
     "grunt-mocha": "^1.0.2",
-    "grunt-mocha-test": "^0.12.7",
+    "grunt-mocha-test": "^0.13.2",
     "grunt-remove-logging": "^0.2.0",
     "istanbul": "^0.4.4",
     "load-grunt-tasks": "^3.2.0",
     "mocha": "^2.2.5",
-    "should": "^9.0.2",
+    "should": "^11.1.1",
     "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0"
   }
