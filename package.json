@@ -7,7 +7,7 @@
     "node": ">=4.4.0"
   },
   "scripts": {
-    "test": "mocha --recursive -R spec --require should test/**/*.spec.js --bail",
+    "test": "mocha",
     "test-cov": "node node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha  -- -u exports --require should  --recursive test/**/*.spec.js --bail",
     "test-travis": "node node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -u exports --require should  --recursive test/**/*.spec.js --bail",
     "coveralls": "node ./node_modules/.bin/coveralls < ./coverage/lcov.info",

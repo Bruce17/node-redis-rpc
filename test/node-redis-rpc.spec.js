@@ -12,9 +12,12 @@ var conf2 = {port: 6379, scope: 'anotherscope'};
 
 describe('Node Redis RPC', function () {
     var stubs = {};
+    var nrr
 
     beforeEach(function () {
         stubs.consoleInfo = sinon.stub(console, 'info');
+        
+        nrr = null
     });
 
     afterEach(function () {
@@ -24,13 +27,21 @@ describe('Node Redis RPC', function () {
                 stubs[key].restore();
             }
         }
+        
+        // Safely (connections will be closed properly once all commands are sent)
+        nrr.quit();
     });
+    
+    after(function () {
+        // Dangerously (connections will be immediately terminated)
+        nrr.end();
+    })
 
     // NOTICE: copied from "node redis pubsub"
     it('Should send and receive standard messages correctly', function (done) {
-        var rq = new NodeRedisRpc(conf);
+        nrr = new NodeRedisRpc(conf);
 
-        rq.on('a test #1',
+        nrr.on('a test #1',
             function (data, channel) {
                 data.first.should.equal('First message');
                 data.second.should.equal('Second message');
@@ -38,7 +49,7 @@ describe('Node Redis RPC', function () {
                 done();
             },
             function () {
-                rq.emit('a test #1', {
+                nrr.emit('a test #1', {
                     first: 'First message',
                     second: 'Second message'
                 });
@@ -47,9 +58,9 @@ describe('Node Redis RPC', function () {
     });
 
     it('Should send and receive rpc messages correctly', function (done) {
-        var rq = new NodeRedisRpc(conf);
+        nrr = new NodeRedisRpc(conf);
 
-        rq.on('a test #2',
+        nrr.on('a test #2',
             function (data, channel, rpcDone) {
                 data.first.should.equal('First message');
                 data.second.should.equal('Second message');
@@ -58,7 +69,7 @@ describe('Node Redis RPC', function () {
                 rpcDone(null, {rpcData: 'test test'});
             },
             function () {
-                rq.emit('a test #2',
+                nrr.emit('a test #2',
                     {
                         first: 'First message',
                         second: 'Second message'
